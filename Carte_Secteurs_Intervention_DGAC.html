@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8e457c9b31807a73bb771bc79d672036 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8e457c9b31807a73bb771bc79d672036" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8e457c9b31807a73bb771bc79d672036 = L.map(
+                "map_8e457c9b31807a73bb771bc79d672036",
+                {
+                    center: [46.6379, 5.4583],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9292fbf26e03afa4b4f7f71cfdf8f77d = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8e457c9b31807a73bb771bc79d672036);
+        
+    
+            var circle_04885c49b754c92a82dddc9a4f0f4517 = L.circle(
+                [46.6379, 5.4583],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 45000, "stroke": true, "weight": 3}
+            ).addTo(map_8e457c9b31807a73bb771bc79d672036);
+        
+    
+            circle_04885c49b754c92a82dddc9a4f0f4517.bindTooltip(
+                `<div>
+                     Zone sans supplément (0-45 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e73b332f465a4980bad18f33d6acca94 = L.circle(
+                [46.6379, 5.4583],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 85000, "stroke": true, "weight": 3}
+            ).addTo(map_8e457c9b31807a73bb771bc79d672036);
+        
+    
+            circle_e73b332f465a4980bad18f33d6acca94.bindTooltip(
+                `<div>
+                     Zone avec supplément de 5 €/h (45-85 km)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b0fd94996df95f098fd7b07b3d33d95a = L.marker(
+                [46.6379, 5.4583],
+                {}
+            ).addTo(map_8e457c9b31807a73bb771bc79d672036);
+        
+    
+            var icon_c5822b617eed77c523af0e7b4bf23b4d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b0fd94996df95f098fd7b07b3d33d95a.setIcon(icon_c5822b617eed77c523af0e7b4bf23b4d);
+        
+    
+        var popup_a1989c7155effda2016bd15fe63966cd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_15b50a0c6224e09f2986363a46e26158 = $(`<div id="html_15b50a0c6224e09f2986363a46e26158" style="width: 100.0%; height: 100.0%;">Beaufort-Orbagna (point de départ)</div>`)[0];
+            popup_a1989c7155effda2016bd15fe63966cd.setContent(html_15b50a0c6224e09f2986363a46e26158);
+        
+
+        marker_b0fd94996df95f098fd7b07b3d33d95a.bindPopup(popup_a1989c7155effda2016bd15fe63966cd)
+        ;
+
+        
+    
+    
+            var measure_control_341575a5ff9a36c46e090413fd93f882 = new L.Control.Measure(
+                {"position": "topright", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "meters", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
+            map_8e457c9b31807a73bb771bc79d672036.addControl(measure_control_341575a5ff9a36c46e090413fd93f882);
+
+        
+</script>
+</html>
